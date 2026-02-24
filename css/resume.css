@@ -1,0 +1,340 @@
+body {
+    background-color: var(--queen-pink);
+    overflow-x: hidden;
+}
+
+/* HEADER */
+.resume-header {
+    background: linear-gradient(135deg, var(--old-lavender) 0%, var(--jacarta) 100%);
+    padding: 0 10%;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* NAVIGATION */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    width: 100%;
+}
+
+/* HERO */
+.hero-text {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 1.2s ease-out forwards;
+}
+
+.hero-text h1 {
+    font-size: 8rem;
+    color: var(--queen-pink);
+    font-weight: 900;
+    letter-spacing: 5px;
+}
+
+/* MAIN CONTENT */
+.resume-main { padding: 80px 10%; }
+
+.resume-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 80px;
+}
+
+.resume-card {
+    background-color: var(--middle-purple);
+    padding: 50px;
+    border-radius: 10px;
+    animation: fadeInUp 0.8s ease-out both;
+}
+
+.resume-card h2 {
+    color: var(--jacarta);
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.resume-item {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.year {
+    font-weight: 900;
+    color: var(--brown-chocolate);
+    min-width: 150px;
+    font-size: 1.2rem;
+}
+
+.details h3 {
+    color: var(--jacarta);
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.details p {
+    color: var(--jacarta);
+    font-style: italic;
+    opacity: 0.8;
+}
+
+/*  Download Button */
+.resume-download-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0 100px 0;
+    animation: fadeInUp 0.8s ease-out both;
+    animation-delay: 0.6s;
+}
+
+.main-download-btn {
+    background-color: var(--brown-chocolate);
+    color: var(--queen-pink);
+    text-decoration: none;
+    padding: 18px 60px; 
+    border-radius: 50px;
+    font-weight: 800;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+}
+
+.main-download-btn i {
+    font-size: 1.5rem; 
+}
+
+.main-download-btn:hover {
+    background-color: var(--jacarta);
+    transform: scale(1.05);
+    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.4);
+}
+
+/* CERTIFICATIONS */
+.certifications-section h2 {
+    color: var(--jacarta);
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    animation: fadeInUp 0.8s ease-out both;
+}
+
+.cert-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.cert-card {
+    background-color: var(--old-lavender);
+    padding: 30px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;    
+    min-height: 400px;      
+    animation: fadeInUp 0.8s ease-out both;
+}
+
+.cert-card .cert-title {
+    color: var(--queen-pink);
+    font-style: italic;
+    font-size: 1.3rem;
+    margin: 10px 0 20px 0;
+    text-align: center;
+    flex-grow: 1; 
+}
+
+.cert-btn-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: auto; 
+    padding-bottom: 10px; 
+}
+
+.cert-card:nth-child(1) { animation-delay: 0.3s; }
+.cert-card:nth-child(2) { animation-delay: 0.4s; }
+.cert-card:nth-child(3) { animation-delay: 0.5s; }
+
+.cert-placeholder {
+    width: 100%;
+    height: 180px; 
+    flex-shrink: 0;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cert-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    transition: transform 0.5s ease;
+}
+
+.cert-card:hover .cert-placeholder {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
+}
+
+.cert-card:hover .cert-placeholder img {
+    transform: scale(1.05); 
+}
+
+.cert-card p {
+    color: var(--queen-pink);
+    font-style: italic;
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+}
+
+.download-btn {
+    background-color: var(--brown-chocolate);
+    color: var(--queen-pink);
+    text-decoration: none;
+    padding: 10px 30px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.download-btn:hover {
+    background-color: var(--jacarta);
+    transform: scale(1.05);
+}
+
+/* FOOTER */
+.bottom-section {
+    padding: 60px 5% 30px;
+}
+
+.social-bar {
+    display: flex;
+}
+
+.social-bar a:hover i {
+    transform: rotateY(360deg);
+    transition: transform 0.6s ease;
+}
+
+/* ANIMATIONS */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* RESPONSIVE */
+@media (max-width: 1100px) {
+    .resume-grid, .cert-grid { grid-template-columns: 1fr; }
+    .hero-text h1 { font-size: 5rem; }
+}
+
+@media (max-width: 1024px) {
+    .hero-text h1 {
+        font-size: 6rem;
+    }
+
+    .resume-grid {
+        grid-template-columns: 1fr; 
+        gap: 30px;
+    }
+
+    .cert-grid {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+@media (max-width: 768px) {
+    .resume-header {
+        padding: 0 5%;
+        min-height: 300px; 
+    }
+
+    .navbar {
+        flex-direction: row; 
+        justify-content: space-between;
+        gap: 0;
+        padding: 15px 0;
+    }
+
+    .logo img {
+        height: 50px; 
+        margin-left: 0;
+    }
+
+    .hero-text h1 {
+        font-size: 4rem; 
+        margin-top: 10px;
+        letter-spacing: 2px;
+    }
+
+    .resume-main {
+        padding: 40px 5%;
+    }
+
+    .resume-item {
+        flex-direction: column;
+        gap: 5px;
+        margin-bottom: 25px;
+    }
+
+    .year {
+        min-width: unset;
+        font-size: 1rem;
+        color: var(--jacarta); 
+    }
+
+    .resume-download-center {
+        margin: 20px 0 60px 0;
+    }
+    .main-download-btn {
+        padding: 12px 30px;
+        font-size: 1.2rem;
+    }
+
+    .cert-grid {
+        grid-template-columns: 1fr; 
+    }
+
+    .bottom-section {
+        padding: 60px 5% 30px;
+    }
+
+    .social-bar {
+        justify-content: center; 
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-text h1 {
+        font-size: 2.8rem;
+    }
+
+    .resume-card h2, .certifications-section h2 {
+        font-size: 2rem;
+    }
+
+    .cert-placeholder {
+        height: 150px; 
+    }
+}
